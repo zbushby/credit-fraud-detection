@@ -2,8 +2,8 @@
 [Project Website](https://zbushby.github.io/credit-fraud-detection/)
 
 It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase.
+<a href="url"><img src="/img/DALL_E.png" align="left" height="400" width="400" ></a>
 
-<img src="/img/DALL_E.png" width=75% height=75%>
 
 ## Overview
 The dataset contains transactions made by credit cards in September 2013 by European cardholders.
