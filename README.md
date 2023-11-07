@@ -3,9 +3,7 @@
 
 It is important that credit card companies are able to recognize fraudulent credit card transactions so that customers are not charged for items that they did not purchase.
 
-![DALL_E](/img/DALL_E.png)
-
-<img src="/img/DALL_E.png" width=50% height=50%>
+<img src="/img/DALL_E.png" width=75% height=75%>
 
 ## Overview
 The dataset contains transactions made by credit cards in September 2013 by European cardholders.
