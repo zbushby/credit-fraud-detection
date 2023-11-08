@@ -38,7 +38,13 @@ ggplot(data, aes(x = factor_column)) +
 #EDA report
 create_report(data)
 
+# % of how many fraud/non-fraud
+no_frauds <- sum(data$Class == 0) / nrow(data) * 100
+frauds <- sum(data$Class == 1) / nrow(data) * 100
+cat('No Frauds', round(no_frauds, 2), '% of the dataset\n') #99.83%
+cat('Frauds', round(frauds, 2), '% of the dataset\n') #0.17%
 
+#Since the dataset is imbalanced we can see that 
 
 
 
