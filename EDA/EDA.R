@@ -44,7 +44,11 @@ frauds <- sum(data$Class == 1) / nrow(data) * 100
 cat('No Frauds', round(no_frauds, 2), '% of the dataset\n') #99.83%
 cat('Frauds', round(frauds, 2), '% of the dataset\n') #0.17%
 
-#Since the dataset is imbalanced we can see that 
+#Dataset is imbalanced hence we need to use implement a resampling technique
+#downsampling: remove points
+#upsampling: multipling fraud data points
+#synthetic data: pick points around fraud points
+#
 
 
 
