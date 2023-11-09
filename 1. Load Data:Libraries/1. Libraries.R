@@ -21,5 +21,11 @@ data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//c
 scaled_data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//scaled_creditcard.csv")
 
 #load balanced data
-#this data has been balanced using SMOTE-tomek
-balanced_data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_creditcard.csv")
+balanced_train_data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_train_creditcard.csv")
+
+test_data<- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//test_creditcard.csv")
+
+
+
+
+

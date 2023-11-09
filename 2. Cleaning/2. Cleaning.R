@@ -8,8 +8,23 @@ scaled_data$Time <- scale(scaled_data$Time, center = TRUE, scale = TRUE)
 scaled_data$Amount <- scale(scaled_data$Amount, center = TRUE, scale = TRUE)
 
 #writing clean csv
-
 write.csv(scaled_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//scaled_creditcard.csv", row.names = FALSE)
+
+
+
+# Outlier Detection
+# remove extreme outliers as this will increase accuracy of our model
+
+
+# Outlier Removal Trade off
+#if we remove outliers that aren't extreme there is a risk the model will lose information and hence will have lower accuracy
+
+
+
+
+
+
+
 
 
 #balancing data
