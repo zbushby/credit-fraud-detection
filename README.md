@@ -19,6 +19,9 @@ It contains only numerical input variables which are the result of a PCA transfo
 ## EDA
 [EDA Report](https://htmlpreview.github.io/?https://github.com/zbushby/credit-fraud-detection/blob/main/EDA/report.html)
 
+## Cleaning
+Balanced the Datasets by random undersampling as this method had the best precision when modelling through a logistic regression. Comparison of undersampling, oversampling, Tomek, SMOTE, SMOTEtomek, near miss and no method can be found in the [Balancing.R file](https://github.com/zbushby/credit-fraud-detection/blob/main/Cleaning/3a.%20Balancing.R)
+
 
 ## Machine Learning
 
