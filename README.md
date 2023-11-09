@@ -21,6 +21,7 @@ Balanced the Datasets by random undersampling as this method had the best precis
 
 ## EDA
 [EDA Report on Given Data](https://htmlpreview.github.io/?https://github.com/zbushby/credit-fraud-detection/blob/main/3.%20EDA/report.html#correlation-analysis)
+
 Key Findings
 - PCA confirmed to have taken place*
 - There is no missing data
