@@ -48,7 +48,8 @@ cat('Frauds', round(frauds, 2), '% of the dataset\n') #0.17%
 #downsampling: remove points
 #upsampling: multipling fraud data points
 #synthetic data: pick points around fraud points
-#
+
+
 
 
 
