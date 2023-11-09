@@ -31,6 +31,8 @@ ggplot(data, aes(x = factor_column)) +
 
 #EDA report
 create_report(data)
+#EDA report on balanced data
+create_report(balanced_train_data)
 
 # % of how many fraud/non-fraud
 no_frauds <- sum(data$Class == 0) / nrow(data) * 100
