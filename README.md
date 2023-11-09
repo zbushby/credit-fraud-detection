@@ -22,12 +22,13 @@ Balanced the Datasets by random undersampling as this method had the best precis
 ## EDA
 [EDA Report on Given Data](https://htmlpreview.github.io/?https://github.com/zbushby/credit-fraud-detection/blob/main/3.%20EDA/report.html#correlation-analysis)
 Key Findings
-- PCA at it's heart involves diagonalising a matrix which means solving for the eigenvalues and eigenvectors of that matrix. The whole purpose of the calculation is to find a diagonal representation of the matrix (i.e. only elements along the diagonal of the matrix). By doing PCA again we see the values are the same which proves PCA was done to begin with as PCA on PCA is essentially  trying to calculate the eigenvalues of a diagonal matrix, which yields the exact same diagonal matrix. In addition we can see the components are scaled shown by their distributions around 0.
+- PCA confirmed to have taken place*
 - There is no missing data
-- Fraudulent data is 0.172% of transactions
+- Fraudulent data is 0.172% of transactions, very imbalanced data.
 
+*PCA at it's heart involves diagonalising a matrix which means solving for the eigenvalues and eigenvectors of that matrix. The whole purpose of the calculation is to find a diagonal representation of the matrix (i.e. only elements along the diagonal of the matrix). By doing PCA again we see the values are the same which proves PCA was done to begin with as PCA on PCA is essentially  trying to calculate the eigenvalues of a diagonal matrix, which yields the exact same diagonal matrix. In addition we can see the components are scaled shown by their distributions around 0.
 
-[EDA Report on Cleaned dDta](https://htmlpreview.github.io/?https://github.com/zbushby/credit-fraud-detection/blob/main/3.%20EDA/balanced_train_data_report.html)
+[EDA Report on Cleaned Data](https://htmlpreview.github.io/?https://github.com/zbushby/credit-fraud-detection/blob/main/3.%20EDA/balanced_train_data_report.html)
 -  V1, V3, V7, V9 , V10, V12, V14, V16, V17 are negatively correlated with fraud
 -  V2, V4, V11, V19 and Time are positively correlated with fraud
 - Time seems to be strongly positively correlated to all independant and dependant variables.
