@@ -13,8 +13,15 @@ write.csv(scaled_data, file = "//Users//zachbushby//Documents//Uni//Career//Proj
 
 
 #balancing data
+#using random undersampling refer to Balancing.R to see comparison of different methods
+split <- initial_split(scaled_data, prop = .8)
+train_data <- training(split)
+test_data <- testing(split)
 
+balanced_train_data <- downSample(x = train_data[,-31], y = train_data$Class)
 
-write.csv(balanced_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_creditcard.csv", row.names = FALSE)
-
+#balanced train data
+write.csv(balanced_train_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_train_creditcard.csv", row.names = FALSE)
+#test data
+write.csv(test_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//test_creditcard.csv", row.names = FALSE)
 

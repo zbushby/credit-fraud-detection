@@ -2,6 +2,7 @@
 library(ggplot2)
 library(dplyr)
 library(readr)
+library(tibble)
 library(tidyr)
 library(DataExplorer)
 library(themis)
@@ -9,7 +10,7 @@ library(themis)
 library(caret)
 library(smotefamily)
 library(rsample)
-
+library(data.table)
 
 #load data
 #find the data on kaggle: 
