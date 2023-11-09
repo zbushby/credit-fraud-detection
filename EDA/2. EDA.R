@@ -1,11 +1,5 @@
-# Load necessary libraries
-library(ggplot2)
-library(dplyr)
-library(readr)
-library(tidyr)
-library(DataExplorer)
 
-data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//creditcard.csv")
+
 head(data)
 
 #checks
@@ -45,9 +39,23 @@ cat('No Frauds', round(no_frauds, 2), '% of the dataset\n') #99.83%
 cat('Frauds', round(frauds, 2), '% of the dataset\n') #0.17%
 
 #Dataset is imbalanced hence we need to use implement a resampling technique
+#dataset should be 50/50 fraud/non-fraud data so that we reduce the chance of overfitting and wrong correlations
 #downsampling: remove points
 #upsampling: multipling fraud data points
 #synthetic data: pick points around fraud points
+
+#dist of transaction amount
+#amount is the transaction amount
+hist(data$Amount)
+
+#dist of transaction amount
+#time is the time between the current transaction and the first transaction
+hist(data$Time)
+
+#time and amount need to be scaled 
+# we can assume since all the V variables have undergone PCA that they were scaled beforehand as this is a requirement for PCA
+
+
 
 
 
