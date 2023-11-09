@@ -15,16 +15,21 @@ This dataset presents transactions that occurred in two days, where we have 492 
 
 It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, Kaggle cannot provide the original features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependent cost-sensitive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 
-
-## EDA
-[EDA Report](https://htmlpreview.github.io/?https://github.com/zbushby/credit-fraud-detection/blob/main/EDA/report.html)
-
 ## Cleaning
 Balanced the Datasets by random undersampling as this method had the best precision when modelling through a logistic regression. Comparison of undersampling, oversampling, Tomek, SMOTE, SMOTEtomek, near miss and no method can be found in the [Balancing.R file](https://github.com/zbushby/credit-fraud-detection/blob/main/Cleaning/3a.%20Balancing.R)
 
 
-## Machine Learning
+## EDA
+[EDA Report](https://htmlpreview.github.io/?https://github.com/zbushby/credit-fraud-detection/blob/main/EDA/report.html)
 
+
+
+## Machine Learning Algorithims
+
+### Logistic Regression
+### GBM
+### XGBoost
+### Neural Network
 
 
 ## Acknowledgements
