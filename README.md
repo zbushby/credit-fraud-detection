@@ -43,6 +43,7 @@ Key Findings
 ### XGBoost
 ### Neural Network
 
+## Comparison
 
 ## Acknowledgements
 The dataset has been collected and analysed during a research collaboration between Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection.
