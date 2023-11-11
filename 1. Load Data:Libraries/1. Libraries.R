@@ -14,6 +14,8 @@ library(data.table)
 library(MASS)
 library(randomForest)
 library(e1071)
+library(class)
+
 
 #load data
 #find the data on kaggle: 
