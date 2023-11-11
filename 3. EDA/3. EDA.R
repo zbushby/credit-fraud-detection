@@ -79,6 +79,7 @@ for (col in names(data)) {
     print(paste("Outliers in", col, ":", nrow(outliers)))
   }
 }
+#all 492 outliers that were detected are from the fraud class so don't remove
 
 
 

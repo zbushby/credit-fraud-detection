@@ -11,6 +11,9 @@ library(caret)
 library(smotefamily)
 library(rsample)
 library(data.table)
+library(MASS)
+library(randomForest)
+library(e1071)
 
 #load data
 #find the data on kaggle: 
@@ -21,9 +24,9 @@ data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//c
 scaled_data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//scaled_creditcard.csv")
 
 #load balanced data
-balanced_train_data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_train_creditcard.csv")
+balanced_train_data <- data.frame(read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_train_creditcard.csv"))
 
-test_data<- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//test_creditcard.csv")
+test_data<- data.frame(read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//test_creditcard.csv"))
 
 
 
