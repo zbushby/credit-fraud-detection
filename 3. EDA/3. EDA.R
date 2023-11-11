@@ -59,6 +59,28 @@ hist(data$Time)
 
 
 
+#outlier detection
+boundary <- 2.58 #99%
+
+for (col in names(data)) {
+  if (is.numeric(data[[col]])) {
+    # Boxplot
+    boxplot(data[[col]], main=paste("Boxplot -", col), ylab=col)
+    
+    # Calculate IQR
+    Q1 <- quantile(data[[col]], 0.25)
+    Q3 <- quantile(data[[col]], 0.75)
+    IQR <- IQR(data[[col]])
+    lower_bound <- Q1 - boundary * IQR
+    upper_bound <- Q3 + boundary * IQR
+    
+    # Identifying outliers
+    outliers <- subset(data, data[[col]] < lower_bound | data[[col]] > upper_bound)
+    print(paste("Outliers in", col, ":", nrow(outliers)))
+  }
+}
+
+
 
 
 
