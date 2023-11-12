@@ -37,16 +37,44 @@ Key Findings
 
 
 ## Machine Learning Algorithims
-### Logistic Regression
-
-### GBM
-### XGBoost
-### Neural Network
-- Compared, single layer, 2 layer and deep neural network
+- All algorithims were trained on all parameters (not tuned) and with random undersampled training data tested on 20% left over data.
+- To improve I will do n-fold cross validation to produce more accurate metrics of the peformances of all the models.
+- This imbalanced dataset required using these primary metrics: F-score, Recall & Precision; Accuracy for imbalanced dataset can be decieving
+### The algorithims used were:
+#### - Quadratic Discriminant Analysis (QDA)
+#### - Linear Discriminant Analysis (LDA)
+#### - Logistic Regression (GLM)
+- threshold of 0.9 used
+#### - Random Forest
+- 500 trees 
+#### - Support Vector Machine
+- polynomial kernal had the best performance
+#### - Naive Bayes Classifer
+#### - Kth Nearest Neighbour Classifer (KNN)
+- k = 27
+#### - Gradient Boosting Machine (GBM)
+- training atrributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
+#### - Extreme Gradient Boosing (XGBoost)
+-
+#### - Neural Network
+- Compared different hidden layers: single layer (30), 2 layer (60,30) and deep neural network (100,50,25)
+- Single hidden layer with 30 nodes
 
 ## Comparison
 
+| Model              | F1        | Precision | Recall   | Balanced Accuracy | Sensitivity |
+|--------------------|-----------|-----------|----------|-------------------|-------------|
+| XGBoost            | 0.9965323 | 0.9998229 | 0.9932633| 0.9507601         | 0.9932633   |
+| Logistic Regression| 0.9956370 | 0.9998758 | 0.9914340| 0.9636069         | 0.9914340   |
+| LDA                | 0.9934328 | 0.9998040 | 0.9871423| 0.9431124         | 0.9871423   |
+| SVM                | 0.9893985 | 0.9998384 | 0.9791744| 0.9483028         | 0.9791744   |
+| GBM                | 0.9849774 | 0.9999275 | 0.9704677| 0.9668852         | 0.9704677   |
+| Naive Bayes        | 0.9826203 | 0.9996906 | 0.9661232| 0.9050799         | 0.9661232   |
+| Random Forest      | 0.9782111 | 0.9998714 | 0.9574693| 0.9466245         | 0.9574693   |
+| QDA                | 0.9727855 | 0.9998143 | 0.9471796| 0.9277182         | 0.9471796   |
+| Neural Network     | 0.9666497 | 0.9999248 | 0.9355179| 0.9494103         | 0.9355179   |
 
+## Hyperparameter Tuning of XGBoost
 
 ## Acknowledgements
 The dataset has been collected and analysed during a research collaboration between Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection.
@@ -58,5 +86,18 @@ The dataset has been collected and analysed during a research collaboration betw
 #### Resources:
 
 https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_3_GettingStarted/SimulatedDataset.html 
+
+#### Confusion Matrices of Models:
+
+##### - Quadratic Discriminant Analysis (QDA)
+##### - Linear Discriminant Analysis (LDA)
+##### - Logistic Regression (GLM)
+##### - Random Forest
+##### - Support Vector Machine
+##### - Naive Bayes Classifer
+##### - Kth Nearest Neighbour Classifer (KNN)
+##### - Gradient Boosting Machine (GBM)
+##### - Extreme Gradient Boosing (XGBoost)
+##### - Neural Network
 
 
