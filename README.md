@@ -155,8 +155,8 @@ The dataset has been collected and analysed during a research collaboration betw
 ### Improvement for the Future
 - Compare metrics created by cross validation for each model.
 - Tune models before comparing
-- I'm not sure what type of NN is best in this case; maybe use ReLu instead of sigmoid?; train in keras next time
-- Remove outliers from data. When I looked for outliers all the outliers were fraud cases, maybe doing anomly detection wrong?
+- Train in keras as ReLu is probably better than sigmoid for hidden layer, neuralnet package uses sigmoid as default. Not sure the best NN hidden layers Num and Node Num.
+- Remove outliers from data. When I looked for outliers all the outliers were fraud cases, maybe doing something wrong?
 
 ### Resources:
 
