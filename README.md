@@ -53,11 +53,15 @@ Key Findings
 #### Kth Nearest Neighbour Classifer (KNN)
 - k = 27
 #### Gradient Boosting Machine (GBM)
-- training atrributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
+- training attributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
 #### Extreme Gradient Boosing (XGBoost)
+- trainging attributes: Num trees: 50, max tree depth: 3.
 #### Neural Network
 - Compared different hidden layers: single layer (30), 2 layer (60,30) and deep neural network (100,50,25)
 - Single hidden layer with 30 nodes
+
+
+
 
 ## Comparison
 
