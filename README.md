@@ -44,9 +44,9 @@ Key Findings
 #### Quadratic Discriminant Analysis (QDA)
 #### Linear Discriminant Analysis (LDA)
 #### Logistic Regression (GLM)
-- threshold of 0.9 used
+- threshold of 0.9
 #### Random Forest
-- 500 trees 
+- 50 trees 
 #### Support Vector Machine
 - polynomial kernal had the best performance
 #### Naive Bayes Classifer
@@ -56,6 +56,7 @@ Key Findings
 - training attributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
 #### Extreme Gradient Boosing (XGBoost)
 - trainging attributes: Num trees: 50, max tree depth: 3.
+- threshold of 0.9
 #### Neural Network
 - Compared different hidden layers: single layer (30), 2 layer (60,30) and deep neural network (100,50,25)
 - Single hidden layer with 30 nodes
