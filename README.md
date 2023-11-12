@@ -44,19 +44,19 @@ Key Findings
 #### Quadratic Discriminant Analysis (QDA)
 #### Linear Discriminant Analysis (LDA)
 #### Logistic Regression (GLM)
-- threshold of 0.9
+- Threshold of 0.9
 #### Random Forest
 - 50 trees 
 #### Support Vector Machine
-- polynomial kernal had the best performance
+- Polynomial kernal had the best performance
 #### Naive Bayes Classifer
 #### Kth Nearest Neighbour Classifer (KNN)
 - k = 27
 #### Gradient Boosting Machine (GBM)
-- training attributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
+- Training attributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
 #### Extreme Gradient Boosing (XGBoost)
-- trainging attributes: Num trees: 50, max tree depth: 3.
-- threshold of 0.9
+- Training attributes: Num trees: 50, max tree depth: 3.
+- Threshold of 0.9
 #### Neural Network
 - Compared different hidden layers: single layer (30), 2 layer (60,30) and deep neural network (100,50,25)
 - Single hidden layer with 30 nodes
@@ -77,6 +77,8 @@ Key Findings
 | Random Forest      | 0.9782111 | 0.9998714 | 0.9574693| 0.9466245         | 0.9574693   |
 | QDA                | 0.9727855 | 0.9998143 | 0.9471796| 0.9277182         | 0.9471796   |
 | Neural Network     | 0.9666497 | 0.9999248 | 0.9355179| 0.9494103         | 0.9355179   |
+
+XGBoost amazing performance may be due to its robust handling of complex, non-linear data patterns and its effectiveness in managing imbalanced datasets through regularization and focused iterative improvement. 
 
 ## Hyperparameter Tuning of XGBoost
 
@@ -129,8 +131,8 @@ Key Findings
 ##### - Gradient Boosting Machine (GBM)
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
-| 0                      | 55,174  |    4   |
-| 1                      |  1,679  |  105   |
+| 0                      | 55,296  |    9   |
+| 1                      |  1,557  |  100   |
 
 ##### - Extreme Gradient Boosing (XGBoost)
 | Prediction \ Reference |    0    |    1   |
