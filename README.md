@@ -64,7 +64,7 @@ Key Findings
 
 
 
-## Comparison
+## Comparison (random undersampling)
 
 | Model              | F1        | Precision | Recall   | Balanced Accuracy | Sensitivity |
 |--------------------|-----------|-----------|----------|-------------------|-------------|
