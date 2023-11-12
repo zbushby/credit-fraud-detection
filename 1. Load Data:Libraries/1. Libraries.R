@@ -2,7 +2,7 @@ packages <- c("ggplot2", "dplyr", "readr", "tibble", "tidyr",
               "DataExplorer", "themis", "caret", "smotefamily", 
               "rsample", "data.table", "MASS", "randomForest", 
               "e1071", "class", "rpart", "rpart.plot", 
-              "gbm", "xgboost", "fastAdaboost")
+              "gbm", "xgboost", 'neuralnet','keras','tensorflow')
 
 #download libraries 
 for (pkg in packages) {
