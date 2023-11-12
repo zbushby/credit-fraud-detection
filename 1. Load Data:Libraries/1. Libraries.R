@@ -15,7 +15,10 @@ library(MASS)
 library(randomForest)
 library(e1071)
 library(class)
-
+library(rpart)
+library(rpart.plot)
+library(gbm)
+library(xgboost)
 
 #load data
 #find the data on kaggle: 
