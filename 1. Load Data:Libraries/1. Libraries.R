@@ -1,24 +1,25 @@
-#load libraries
-library(ggplot2)
-library(dplyr)
-library(readr)
-library(tibble)
-library(tidyr)
-library(DataExplorer)
-library(themis)
-#library(DMwR) DMwR removed from Cran :(
-library(caret)
-library(smotefamily)
-library(rsample)
-library(data.table)
-library(MASS)
-library(randomForest)
-library(e1071)
-library(class)
-library(rpart)
-library(rpart.plot)
-library(gbm)
-library(xgboost)
+packages <- c("ggplot2", "dplyr", "readr", "tibble", "tidyr", 
+              "DataExplorer", "themis", "caret", "smotefamily", 
+              "rsample", "data.table", "MASS", "randomForest", 
+              "e1071", "class", "rpart", "rpart.plot", 
+              "gbm", "xgboost", "fastAdaboost")
+
+#download libraries 
+for (pkg in packages) {
+  if (!pkg %in% rownames(installed.packages())) {
+    install.packages(pkg)
+  }
+}
+
+for (pkg in packages) {
+  if (pkg %in% rownames(installed.packages())) {
+    library(pkg, character.only = TRUE)
+  } else {
+    warning(paste("Package", pkg, "is not installed."))
+  }
+}
+
+
 
 #load data
 #find the data on kaggle: 
