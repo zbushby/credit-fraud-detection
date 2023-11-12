@@ -86,61 +86,61 @@ XGBoost amazing performance may be due to its robust handling of complex, non-li
 ## Extras:
 #### Confusion Matrices of Models:
 
-##### - Quadratic Discriminant Analysis (QDA)
+##### Quadratic Discriminant Analysis (QDA)
 | Prediction \ Reference |     0   |   1    |
 |------------------------|---------|--------|
 | 0                      | 53,850  |   10   |
 | 1                      | 3,003   |   99   |
 
-##### - Linear Discriminant Analysis (LDA)
+##### Linear Discriminant Analysis (LDA)
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 56,122  |   11   |
 | 1                      |   731   |   98   |
 
-##### - Logistic Regression (GLM)
+##### Logistic Regression (GLM)
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 56,366  |    7   |
 | 1                      |   487   |  102   |
 
-##### - Random Forest
+##### Random Forest
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 54,435  |    7   |
 | 1                      |  2,418  |  102   |
 
-##### - Support Vector Machine
+##### Support Vector Machine
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 55,669  |    9   |
 | 1                      |  1,184  |  100   |
 
-##### - Naive Bayes Classifer
+##### Naive Bayes Classifer
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 54,927  |   17   |
 | 1                      |  1,926  |   92   |
 
-##### - Kth Nearest Neighbour Classifer (KNN)
+##### Kth Nearest Neighbour Classifer (KNN)
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 56,391  |    8   |
 | 1                      |   462   |  101   |
 
-##### - Gradient Boosting Machine (GBM)
+##### Gradient Boosting Machine (GBM)
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 55,296  |    9   |
 | 1                      |  1,557  |  100   |
 
-##### - Extreme Gradient Boosing (XGBoost)
+##### Extreme Gradient Boosing (XGBoost)
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 56,470  |   10   |
 | 1                      |   383   |   99   |
 
-##### - Neural Network
+##### Neural Network
 | Prediction \ Reference |    0    |    1   |
 |------------------------|---------|--------|
 | 0                      | 53,187  |    4   |
@@ -152,7 +152,11 @@ The dataset has been collected and analysed during a research collaboration betw
 
 #### [Credit Card Fraud Data](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/download?datasetVersionNumber=3)
 
-
+### Improvement for the Future
+- Compare metrics created by cross validation for each model.
+- Tune models before comparing
+- I'm not sure what type of NN is best in this case; maybe use ReLu instead of sigmoid?; train in keras next time
+- Remove outliers from data. When I looked for outliers all the outliers were fraud cases, maybe doing anomly detection wrong?
 
 ### Resources:
 
