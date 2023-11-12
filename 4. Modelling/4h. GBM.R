@@ -55,7 +55,7 @@ gbm_pred = predict.gbm(object = gbm_model,
                         n.trees = 500,           # 500 tress to be built
                         type = "response")
 
-class_names = as.numeric(colnames(gbm_pred)[apply(gbm_pred, 1, which.max)]) - 1
+class_names = as.numeric(colnames(gbm_pred)[apply(gbm_pred, 1, which.max)])
 
 gbm_cmatrix <- confusionMatrix(data = as.factor(class_names), reference = as.factor(test_data$Class))
 gbm_cmatrix$table

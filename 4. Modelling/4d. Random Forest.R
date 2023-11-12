@@ -1,6 +1,8 @@
 #Random Forest
 
 set.seed(123)
+m <- floor(ncol(balanced_train_data)-1)
+
 balanced_train_data$Class <- as.factor(balanced_train_data$Class)
 
 rf_model <- randomForest(Class ~ ., data = balanced_train_data, mtry = m, ntree = 500)

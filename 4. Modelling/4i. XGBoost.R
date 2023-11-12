@@ -1,10 +1,10 @@
 # Extreme Gradient Boosting
 
 X_train = data.matrix(balanced_train_data[,1:30])                  
-y_train = balanced_train_data[,31]                               
+y_train = balanced_train_data[,31]                              
 
 X_test = data.matrix(test_data[,1:30])                    
-y_test = test_data[,31]                                   
+y_test = test_data[,31]                                  
 
 
 xgboost_train = xgb.DMatrix(data=X_train, label=y_train)
