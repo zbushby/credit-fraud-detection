@@ -76,17 +76,8 @@ Key Findings
 
 ## Hyperparameter Tuning of XGBoost
 
-## Acknowledgements
-The dataset has been collected and analysed during a research collaboration between Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection.
 
-### [Credit Card Fraud Data](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/download?datasetVersionNumber=3)
-
-
-
-#### Resources:
-
-https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_3_GettingStarted/SimulatedDataset.html 
-
+## Extras:
 #### Confusion Matrices of Models:
 
 ##### - Quadratic Discriminant Analysis (QDA)
@@ -99,5 +90,18 @@ https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_3_Ge
 ##### - Gradient Boosting Machine (GBM)
 ##### - Extreme Gradient Boosing (XGBoost)
 ##### - Neural Network
+
+## Acknowledgements
+The dataset has been collected and analysed during a research collaboration between Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection.
+
+#### [Credit Card Fraud Data](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud/download?datasetVersionNumber=3)
+
+
+
+### Resources:
+
+https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_3_GettingStarted/SimulatedDataset.html 
+
+
 
 
