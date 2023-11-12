@@ -41,22 +41,22 @@ Key Findings
 - To improve I will do n-fold cross validation to produce more accurate metrics of the peformances of all the models.
 - This imbalanced dataset required using these primary metrics: F-score, Recall & Precision; Accuracy for imbalanced dataset can be decieving
 ### The algorithims used were:
-#### - Quadratic Discriminant Analysis (QDA)
-#### - Linear Discriminant Analysis (LDA)
-#### - Logistic Regression (GLM)
+#### Quadratic Discriminant Analysis (QDA)
+#### Linear Discriminant Analysis (LDA)
+#### Logistic Regression (GLM)
 - threshold of 0.9 used
-#### - Random Forest
+#### Random Forest
 - 500 trees 
-#### - Support Vector Machine
+#### Support Vector Machine
 - polynomial kernal had the best performance
-#### - Naive Bayes Classifer
-#### - Kth Nearest Neighbour Classifer (KNN)
+#### Naive Bayes Classifer
+#### Kth Nearest Neighbour Classifer (KNN)
 - k = 27
-#### - Gradient Boosting Machine (GBM)
+#### Gradient Boosting Machine (GBM)
 - training atrributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
-#### - Extreme Gradient Boosing (XGBoost)
+#### Extreme Gradient Boosing (XGBoost)
 -
-#### - Neural Network
+#### Neural Network
 - Compared different hidden layers: single layer (30), 2 layer (60,30) and deep neural network (100,50,25)
 - Single hidden layer with 30 nodes
 
