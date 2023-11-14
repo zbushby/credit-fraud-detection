@@ -46,10 +46,10 @@ tomek_log_cmatrix <- confusionMatrix(data = as.factor(as.numeric(tomek_log_pred 
 
 
 
-# #threhold optimisation
+#threhold optimisation
 # preds <- list(
-#   nearmiss = nearmiss_log_pred, 
-#   smote = smote_log_pred, 
+#   nearmiss = nearmiss_log_pred,
+#   smote = smote_log_pred,
 #   tomek = tomek_log_pred)
 # for (pred_name in names(preds)){
 #   #function to calculate precision, recall, and F1 score for a given threshold
@@ -61,18 +61,18 @@ tomek_log_cmatrix <- confusionMatrix(data = as.factor(as.numeric(tomek_log_pred 
 #     f1_score <- cm$byClass['F1']
 #     return(c(Threshold = threshold, Precision = precision, Recall = recall, F1 = f1_score))
 #   }
-#   
+# 
 #   #iterate through different thresholds
 #   thresholds <- seq(0.1, 0.9, by = 0.01)
 #   metrics <- t(sapply(thresholds, function(t) calc_metrics(t, preds[[pred_name]], test_data$Class)))
 #   metrics_df <- as.data.frame(metrics)
-#   
+# 
 #   #optimal threshold = highest F1 score as f1 takes into account both recall and precision
 #   optimal_row <- metrics_df[which.max(metrics_df$F1), ]
 #   optimal_threshold <- optimal_row$Threshold
 #   print(pred_name)
 #   print(optimal_row)
-#   
+# 
 # }
 
 

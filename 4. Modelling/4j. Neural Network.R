@@ -4,14 +4,14 @@
 #------------------------------------------------------------------------------
 
 #single layer
-nearmiss_single_nn_model = neuralnet(
-  Class~.,
-  data=nearmiss_train_data,
-  hidden=c(30),
-  threshold = 0.5,
-  linear.output = FALSE
-)
-saveRDS(nearmiss_single_nn_model, paste0(base_path_data,"nearmiss_single_nn_model.rds"))
+# nearmiss_single_nn_model = neuralnet(
+#   Class~.,
+#   data=nearmiss_train_data,
+#   hidden=c(30),
+#   threshold = 0.5,
+#   linear.output = FALSE
+# )
+# saveRDS(nearmiss_single_nn_model, paste0(base_path_data,"nearmiss_single_nn_model.rds"))
 nearmiss_single_nn_model <- readRDS(paste0(base_path_data,"nearmiss_single_nn_model.rds"))
 
 #plot(single_nn_model,rep = "best")
@@ -21,14 +21,14 @@ nearmiss_single_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(nearmiss_s
 
 
 #2 hidden layers
-nearmiss_two_nn_model = neuralnet(
-  Class~.,
-  data=nearmiss_train_data,
-  hidden=c(60,30),
-  threshold = 0.5,
-  linear.output = FALSE
-)
-saveRDS(nearmiss_two_nn_model, paste0(base_path_data,"nearmiss_two_nn_model.rds"))
+# nearmiss_two_nn_model = neuralnet(
+#   Class~.,
+#   data=nearmiss_train_data,
+#   hidden=c(60,30),
+#   threshold = 0.5,
+#   linear.output = FALSE
+# )
+# saveRDS(nearmiss_two_nn_model, paste0(base_path_data,"nearmiss_two_nn_model.rds"))
 nearmiss_two_nn_model <- readRDS(paste0(base_path_data,"nearmiss_two_nn_model.rds"))
 
 #plot(two_nn_model,rep = "best")
@@ -36,13 +36,13 @@ nearmiss_two_nn_pred <- predict(nearmiss_two_nn_model, test_data)
 nearmiss_two_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(nearmiss_two_nn_pred>0.5,1,0)), reference = as.factor(test_data$Class))
 
 #Deep Neural Network
-nearmiss_deep_nn_model = neuralnet(
-  Class~.,
-  data=nearmiss_train_data,
-  hidden=c(100,50,25),
-  linear.output = FALSE
-)
-saveRDS(nearmiss_deep_nn_model, paste0(base_path_data,"nearmiss_deep_nn_model.rds"))
+# nearmiss_deep_nn_model = neuralnet(
+#   Class~.,
+#   data=nearmiss_train_data,
+#   hidden=c(100,50,25),
+#   linear.output = FALSE
+# )
+# saveRDS(nearmiss_deep_nn_model, paste0(base_path_data,"nearmiss_deep_nn_model.rds"))
 nearmiss_deep_nn_model <- readRDS(paste0(base_path_data,"nearmiss_deep_nn_model.rds"))
 
 #plot(deep_nn_model,rep = "best")
@@ -51,14 +51,14 @@ nearmiss_deep_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(nearmiss_dee
 
 #SMOTE Data
 #------------------------------------------------------------------------------
-smote_single_nn_model = neuralnet(
-  Class~.,
-  data=smote_train_data,
-  hidden=c(30),
-  threshold = 0.5,
-  linear.output = FALSE
-)
-saveRDS(smote_single_nn_model, paste0(base_path_data,"smote_single_nn_model.rds"))
+# smote_single_nn_model = neuralnet(
+#   Class~.,
+#   data=smote_train_data,
+#   hidden=c(30),
+#   threshold = 0.5,
+#   linear.output = FALSE
+# )
+# saveRDS(smote_single_nn_model, paste0(base_path_data,"smote_single_nn_model.rds"))
 smote_single_nn_model <- readRDS(paste0(base_path_data,"smote_single_nn_model.rds"))
 
 #plot(single_nn_model,rep = "best")
@@ -68,14 +68,14 @@ smote_single_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(smote_single_
 
 
 #2 hidden layers
-smote_two_nn_model = neuralnet(
-  Class~.,
-  data=smote_train_data,
-  hidden=c(60,30),
-  threshold = 0.5,
-  linear.output = FALSE
-)
-saveRDS(smote_two_nn_model, paste0(base_path_data,"smote_two_nn_model.rds"))
+# smote_two_nn_model = neuralnet(
+#   Class~.,
+#   data=smote_train_data,
+#   hidden=c(60,30),
+#   threshold = 0.5,
+#   linear.output = FALSE
+# )
+# saveRDS(smote_two_nn_model, paste0(base_path_data,"smote_two_nn_model.rds"))
 smote_two_nn_model <- readRDS(paste0(base_path_data,"smote_two_nn_model.rds"))
 
 #plot(two_nn_model,rep = "best")
@@ -83,13 +83,13 @@ smote_two_nn_pred <- predict(smote_two_nn_model, test_data)
 smote_two_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(smote_two_nn_pred>0.5,1,0)), reference = as.factor(test_data$Class))
 
 #Deep Neural Network
-smote_deep_nn_model = neuralnet(
-  Class~.,
-  data=smote_train_data,
-  hidden=c(100,50,25),
-  linear.output = FALSE
-)
-saveRDS(smote_deep_nn_model, paste0(base_path_data,"smote_deep_nn_model.rds"))
+# smote_deep_nn_model = neuralnet(
+#   Class~.,
+#   data=smote_train_data,
+#   hidden=c(100,50,25),
+#   linear.output = FALSE
+# )
+# saveRDS(smote_deep_nn_model, paste0(base_path_data,"smote_deep_nn_model.rds"))
 smote_deep_nn_model <- readRDS(paste0(base_path_data,"smote_deep_nn_model.rds"))
 
 #plot(deep_nn_model,rep = "best")
@@ -99,14 +99,14 @@ smote_deep_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(smote_deep_nn_p
 
 #Tomek Links Data
 #------------------------------------------------------------------------------
-tomek_single_nn_model = neuralnet(
-  Class~.,
-  data=tomek_train_data,
-  hidden=c(30),
-  threshold = 0.5,
-  linear.output = FALSE
-)
-saveRDS(tomek_single_nn_model, paste0(base_path_data,"tomek_single_nn_model.rds"))
+# tomek_single_nn_model = neuralnet(
+#   Class~.,
+#   data=tomek_train_data,
+#   hidden=c(30),
+#   threshold = 0.5,
+#   linear.output = FALSE
+# )
+# saveRDS(tomek_single_nn_model, paste0(base_path_data,"tomek_single_nn_model.rds"))
 tomek_single_nn_model <- readRDS(paste0(base_path_data,"tomek_single_nn_model.rds"))
 
 #plot(single_nn_model,rep = "best")
@@ -116,28 +116,28 @@ tomek_single_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(tomek_single_
 
 
 #2 hidden layers
-tomek_two_nn_model = neuralnet(
-  Class~.,
-  data=tomek_train_data,
-  hidden=c(60,30),
-  threshold = 0.5,
-  linear.output = FALSE
-)
-saveRDS(tomek_two_nn_model, paste0(base_path_data,"tomek_two_nn_model.rds"))
+# tomek_two_nn_model = neuralnet(
+#   Class~.,
+#   data=tomek_train_data,
+#   hidden=c(60,30),
+#   threshold = 0.5,
+#   linear.output = FALSE
+# )
+# saveRDS(tomek_two_nn_model, paste0(base_path_data,"tomek_two_nn_model.rds"))
 tomek_two_nn_model <- readRDS(paste0(base_path_data,"tomek_two_nn_model.rds"))
 
 #plot(two_nn_model,rep = "best")
 tomek_two_nn_pred <- predict(tomek_two_nn_model, test_data)
-tomek_two_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(tomek_two_nn_pred>0.5,1,0)), reference = as.factor(test_data$Class))
+tomek_two_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(tomek_two_nn_pred > 0.5,1,0)), reference = as.factor(test_data$Class))
 
 #Deep Neural Network
-tomek_deep_nn_model = neuralnet(
-  Class~.,
-  data=tomek_train_data,
-  hidden=c(100,50,25),
-  linear.output = FALSE
-)
-saveRDS(tomek_deep_nn_model, paste0(base_path_data,"tomek_deep_nn_model.rds"))
+# tomek_deep_nn_model = neuralnet(
+#   Class~.,
+#   data=tomek_train_data,
+#   hidden=c(100,50,25),
+#   linear.output = FALSE
+# )
+# saveRDS(tomek_deep_nn_model, paste0(base_path_data,"tomek_deep_nn_model.rds"))
 tomek_deep_nn_model <- readRDS(paste0(base_path_data,"tomek_deep_nn_model.rds"))
 
 #plot(deep_nn_model,rep = "best")
@@ -186,6 +186,5 @@ tomek_deep_nn_cmatrix <- confusionMatrix(data = as.factor(ifelse(tomek_deep_nn_p
 # #Predicted: horizontal, Real: vertical
 # print(combined_table)
 # 
-# #Single is the best
 # 
 # 
