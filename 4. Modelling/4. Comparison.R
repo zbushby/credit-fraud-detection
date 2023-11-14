@@ -15,7 +15,19 @@ source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Frau
 source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4c. Logisitic Regression.R")
 #Random Forest
 source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4d. Random Forest.R")
-
+#Support Vector Machine
+#very slow :(
+source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4e. SVM.R")
+#Naive Bayes
+source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4f. Naive Bayes.R")
+#kth Nearest Neighbour
+source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4g. KNN.R")
+#Gradient Boosting Machines
+source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4h. GBM.R")
+#Extreme Gradient Boosting
+source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4i. XGBoost.R")
+#Neural Networks
+source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4j. Neural Network.R")
 
 
 #Quadratic Discriminant Analysis (QDA)
@@ -81,28 +93,49 @@ tomek_radial_svm_cmatrix$byClass
 
 #Naives Bayes
 #----------------------------------------------------------------------------
-nb_cmatrix$table
-nb_cmatrix$byClass
+nearmiss_nb_cmatrix$table
+nearmiss_nb_cmatrix$byClass
+smote_nb_cmatrix$table
+smote_nb_cmatrix$byClass
+tomek_nb_cmatrix$table
+tomek_nb_cmatrix$byClass
 
 #K-nearest neighbour (KNN)
 #----------------------------------------------------------------------------
-knn_cmatrix$table
-knn_cmatrix$byClass
+nearmiss_knn_cmatrix$table
+nearmiss_knn_cmatrix$byClass
+smote_knn_cmatrix$table
+smote_knn_cmatrix$byClass
+tomek_knn_cmatrix$table
+tomek_knn_cmatrix$byClass
 
 #Gradient Boosting Machine (GBM)
 #----------------------------------------------------------------------------
-gbm_cmatrix$table
-gbm_cmatrix$byClass
+nearmiss_gbm_cmatrix$table
+nearmiss_gbm_cmatrix$byClass
+smote_gbm_cmatrix$table
+smote_gbm_cmatrix$byClass
+tomek_gbm_cmatrix$table
+tomek_gbm_cmatrix$byClass
+
 
 #Extreme Gradient Boosting (XGBoost)
 #----------------------------------------------------------------------------
-xgb_cmatrix$table
-xgb_cmatrix$byClass
+nearmiss_xgb_cmatrix$table
+nearmiss_xgb_cmatrix$byClass
+smote_xgb_cmatrix$table
+smote_xgb_cmatrix$byClass
+tomek_xgb_cmatrix$table
+tomek_xgb_cmatrix$byClass
 
 #Neural Network
 #----------------------------------------------------------------------------
-nn_cmatrix$table
-nn_cmatrix$byClass
+nearmiss_nn_cmatrix$table
+nearmiss_nn_cmatrix$byClass
+smote_nn_cmatrix$table
+smote_nn_cmatrix$byClass
+tomek_nn_cmatrix$table
+tomek_nn_cmatrix$byClass
 
 
 #Comparison
