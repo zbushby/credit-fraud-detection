@@ -47,7 +47,6 @@ From Scaled Data
 
 ## Machine Learning Algorithims
 - All algorithims were trained on all parameters (not tuned) on 80% of the data with 20% left over data for testing. The training data was randomly undersampled.
-- To improve I will do n-fold cross validation to produce more accurate metrics of the peformances of all the models.
 - This imbalanced dataset required using these primary metrics: F-score, Recall & Precision; Accuracy for imbalanced dataset can be decieving
 ### The algorithims used were:
 #### Quadratic Discriminant Analysis (QDA)
