@@ -1,8 +1,5 @@
 #Multiple Classifiers
 
-#if you haven't loaded all the libraries already
-source("//1. Load Data_Libraries//1. Libraries.R")
-
 
 #Models: LDA, QDA, GLM, RF, SVM, Naives Bayes, KNN, GBM, XGBoost, AdaBoost
 

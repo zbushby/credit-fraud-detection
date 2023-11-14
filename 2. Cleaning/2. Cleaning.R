@@ -1,7 +1,7 @@
 #scaling and balancing data
 #if not already defined in libraries.R
 #base_path_data <- "//Users//zachbushby//Documents//edu//data_science//Projects//Data//"
-
+data <- read_csv(paste0(base_path_data, "creditcard.csv"))
 #Scale time and amount
 scaled_data <- data
 
