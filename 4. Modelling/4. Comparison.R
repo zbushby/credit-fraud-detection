@@ -13,7 +13,6 @@ source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Frau
 #Random Forest
 source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4d. Random Forest.R")
 #Support Vector Machine
-#very slow :(
 source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4e. SVM.R")
 #Naive Bayes
 source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//4. Modelling//4f. Naive Bayes.R")
@@ -73,19 +72,19 @@ nearmiss_poly_svm_cmatrix$byClass
 nearmiss_radial_svm_cmatrix$table
 nearmiss_radial_svm_cmatrix$byClass
 #smote
-smote_linear_svm_cmatrix$table
-smote_linear_svm_cmatrix$byClass
-smote_poly_svm_cmatrix$table
-smote_poly_svm_cmatrix$byClass
-smote_radial_svm_cmatrix$table
-smote_radial_svm_cmatrix$byClass
-#tomek links
-tomek_linear_svm_cmatrix$table
-tomek_linear_svm_cmatrix$byClass
-tomek_poly_svm_cmatrix$table
-tomek_poly_svm_cmatrix$byClass
-tomek_radial_svm_cmatrix$table
-tomek_radial_svm_cmatrix$byClass
+# smote_linear_svm_cmatrix$table
+# smote_linear_svm_cmatrix$byClass
+# smote_poly_svm_cmatrix$table
+# smote_poly_svm_cmatrix$byClass
+# smote_radial_svm_cmatrix$table
+# smote_radial_svm_cmatrix$byClass
+# #tomek links
+# tomek_linear_svm_cmatrix$table
+# tomek_linear_svm_cmatrix$byClass
+# tomek_poly_svm_cmatrix$table
+# tomek_poly_svm_cmatrix$byClass
+# tomek_radial_svm_cmatrix$table
+# tomek_radial_svm_cmatrix$byClass
 
 
 #Naives Bayes

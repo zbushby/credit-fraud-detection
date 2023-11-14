@@ -8,11 +8,13 @@ test_data$Class <- as.factor(test_data$Class)
 #Near Miss Data
 #------------------------------------------------------------------------------
 #linear SVM
-nearmiss_linear_svm_model <- svm(Class ~ .,
-               data = nearmiss_train_data,
-               kernel = "linear",
-               cost = 1,
-               scale = FALSE)
+# nearmiss_linear_svm_model <- svm(Class ~ .,
+#                data = nearmiss_train_data,
+#                kernel = "linear",
+#                cost = 1,
+#                scale = FALSE)
+# saveRDS(nearmiss_linear_svm_model, "./nearmiss_linear_svm_model.rds")
+nearmiss_linear_svm_model <- readRDS("./nearmiss_linear_svm_model.rds")
 
 nearmiss_linear_svm_pred <- predict(nearmiss_linear_svm_model, newdata = test_data, type = "response")
 nearmiss_linear_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_linear_svm_pred),reference = as.factor(test_data$Class))
@@ -20,100 +22,117 @@ nearmiss_linear_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_linear_
 
 
 #polynomial kernal
-nearmiss_poly_svm_model <- svm(Class ~ .,
-                 data = nearmiss_train_data,
-                 kernel = "polynomial",
-                 cost = 1,
-                 scale = FALSE)
+# nearmiss_poly_svm_model <- svm(Class ~ .,
+#                  data = nearmiss_train_data,
+#                  kernel = "polynomial",
+#                  cost = 1,
+#                  scale = FALSE)
+# saveRDS(nearmiss_poly_svm_model, "./nearmiss_poly_svm_model.rds")
+nearmiss_poly_svm_model <- readRDS("./nearmiss_poly_svm_model.rds")
 
 nearmiss_poly_svm_pred <- predict(nearmiss_poly_svm_model, newdata = test_data, type = "response")
 nearmiss_poly_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_poly_svm_pred),reference = as.factor(test_data$Class))
 
 #radial kernal
-nearmiss_radial_svm_model <- svm(Class ~ .,
-                 data = nearmiss_train_data,
-                 kernel = "radial",
-                 cost = 1,
-                 scale = FALSE)
+# nearmiss_radial_svm_model <- svm(Class ~ .,
+#                  data = nearmiss_train_data,
+#                  kernel = "radial",
+#                  cost = 1,
+#                  scale = FALSE)
+# saveRDS(nearmiss_radial_svm_model, "./nearmiss_radial_svm_model.rds")
+nearmiss_radial_svm_model <- readRDS("./nearmiss_radial_svm_model.rds")
 
 nearmiss_radial_svm_pred <- predict(nearmiss_radial_svm_model, newdata = test_data, type = "response")
 nearmiss_radial_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_radial_svm_pred),reference = as.factor(test_data$Class))
 
 
-#SMOTE Data
-#sooooo slow bc of the amount of the huge dataset
-#------------------------------------------------------------------------------
-
-#linear SVM
-smote_linear_svm_model <- svm(Class ~ .,
-                                 data = smote_train_data,
-                                 kernel = "linear",
-                                 cost = 1,
-                                 scale = FALSE)
-
-smote_linear_svm_pred <- predict(smote_linear_svm_model, newdata = test_data, type = "response")
-smote_linear_svm_cmatrix <- confusionMatrix(data = as.factor(smote_linear_svm_pred),reference = as.factor(test_data$Class))
-
-
-
-#polynomial kernal
-smote_poly_svm_model <- svm(Class ~ .,
-                               data = smote_train_data,
-                               kernel = "polynomial",
-                               cost = 1,
-                               scale = FALSE)
-
-smote_poly_svm_pred <- predict(smote_poly_svm_model, newdata = test_data, type = "response")
-smote_poly_svm_cmatrix <- confusionMatrix(data = as.factor(smote_poly_svm_pred),reference = as.factor(test_data$Class))
-
-#radial kernal
-smote_radial_svm_model <- svm(Class ~ .,
-                                 data = smote_train_data,
-                                 kernel = "radial",
-                                 cost = 1,
-                                 scale = FALSE)
-
-smote_radial_svm_pred <- predict(smote_radial_svm_model, newdata = test_data, type = "response")
-smote_radial_svm_cmatrix <- confusionMatrix(data = as.factor(smote_radial_svm_pred),reference = as.factor(test_data$Class))
-
-
-#Tomek Links Data
-#------------------------------------------------------------------------------
-
-#linear SVM
-tomek_linear_svm_model <- svm(Class ~ .,
-                              data = tomek_train_data,
-                              kernel = "linear",
-                              cost = 1,
-                              scale = FALSE)
-
-tomek_linear_svm_pred <- predict(tomek_linear_svm_model, newdata = test_data, type = "response")
-tomek_linear_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_linear_svm_pred),reference = as.factor(test_data$Class))
-
-
-
-#polynomial kernal
-tomek_poly_svm_model <- svm(Class ~ .,
-                            data = tomek_train_data,
-                            kernel = "polynomial",
-                            cost = 1,
-                            scale = FALSE)
-
-tomek_poly_svm_pred <- predict(tomek_poly_svm_model, newdata = test_data, type = "response")
-tomek_poly_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_poly_svm_pred),reference = as.factor(test_data$Class))
-
-#radial kernal
-tomek_radial_svm_model <- svm(Class ~ .,
-                              data = tomek_train_data,
-                              kernel = "radial",
-                              cost = 1,
-                              scale = FALSE)
-
-tomek_radial_svm_pred <- predict(tomek_radial_svm_model, newdata = test_data, type = "response")
-tomek_radial_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_radial_svm_pred),reference = as.factor(test_data$Class))
-
-
-
+# #SMOTE Data
+# #sooooo slow bc of the huge dataset
+# #O(N^3) time complexity hence not worth evaluating
+# #------------------------------------------------------------------------------
+# 
+# #linear SVM
+# smote_linear_svm_model <- svm(Class ~ .,
+#                                  data = smote_train_data,
+#                                  kernel = "linear",
+#                                  cost = 1,
+#                                  scale = FALSE)
+# saveRDS(smote_linear_svm_model, "./smote_linear_svm_model.rds")
+# smote_linear_svm_model <- readRDS("./smote_linear_svm_model.rds")
+# 
+# smote_linear_svm_pred <- predict(smote_linear_svm_model, newdata = test_data, type = "response")
+# smote_linear_svm_cmatrix <- confusionMatrix(data = as.factor(smote_linear_svm_pred),reference = as.factor(test_data$Class))
+# 
+# 
+# 
+# #polynomial kernal
+# smote_poly_svm_model <- svm(Class ~ .,
+#                                data = smote_train_data,
+#                                kernel = "polynomial",
+#                                cost = 1,
+#                                scale = FALSE)
+# saveRDS(smote_poly_svm_model, "./smote_poly_svm_model.rds")
+# smote_poly_svm_model <- readRDS("./smote_poly_svm_model.rds")
+# 
+# smote_poly_svm_pred <- predict(smote_poly_svm_model, newdata = test_data, type = "response")
+# smote_poly_svm_cmatrix <- confusionMatrix(data = as.factor(smote_poly_svm_pred),reference = as.factor(test_data$Class))
+# 
+# #radial kernal
+# smote_radial_svm_model <- svm(Class ~ .,
+#                                  data = smote_train_data,
+#                                  kernel = "radial",
+#                                  cost = 1,
+#                                  scale = FALSE)
+# saveRDS(smote_radial_svm_model, "./smote_radial_svm_model.rds")
+# smote_radial_svm_model <- readRDS("./smote_radial_svm_model.rds")
+# 
+# smote_radial_svm_pred <- predict(smote_radial_svm_model, newdata = test_data, type = "response")
+# smote_radial_svm_cmatrix <- confusionMatrix(data = as.factor(smote_radial_svm_pred),reference = as.factor(test_data$Class))
+# 
+# 
+# #Tomek Links Data
+# #------------------------------------------------------------------------------
+# 
+# #linear SVM
+# tomek_linear_svm_model <- svm(Class ~ .,
+#                               data = tomek_train_data,
+#                               kernel = "linear",
+#                               cost = 1,
+#                               scale = FALSE)
+# saveRDS(tomek_linear_svm_model, "./tomek_linear_svm_model.rds")
+# tomek_linear_svm_model <- readRDS("./tomek_linear_svm_model.rds")
+# 
+# tomek_linear_svm_pred <- predict(tomek_linear_svm_model, newdata = test_data, type = "response")
+# tomek_linear_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_linear_svm_pred),reference = as.factor(test_data$Class))
+# 
+# 
+# 
+# #polynomial kernal
+# tomek_poly_svm_model <- svm(Class ~ .,
+#                             data = tomek_train_data,
+#                             kernel = "polynomial",
+#                             cost = 1,
+#                             scale = FALSE)
+# saveRDS(tomek_poly_svm_model, "./tomek_poly_svm_model.rds")
+# tomek_poly_svm_model <- readRDS("./tomek_poly_svm_model.rds")
+# 
+# tomek_poly_svm_pred <- predict(tomek_poly_svm_model, newdata = test_data, type = "response")
+# tomek_poly_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_poly_svm_pred),reference = as.factor(test_data$Class))
+# 
+# #radial kernal
+# tomek_radial_svm_model <- svm(Class ~ .,
+#                               data = tomek_train_data,
+#                               kernel = "radial",
+#                               cost = 1,
+#                               scale = FALSE)
+# saveRDS(tomek_radial_svm_model, "./tomek_radial_svm_model.rds")
+# tomek_radial_svm_model <- readRDS("./tomek_radial_svm_model.rds")
+# 
+# tomek_radial_svm_pred <- predict(tomek_radial_svm_model, newdata = test_data, type = "response")
+# tomek_radial_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_radial_svm_pred),reference = as.factor(test_data$Class))
+# 
+# 
+# 
 
 # #Comparison
 # 
