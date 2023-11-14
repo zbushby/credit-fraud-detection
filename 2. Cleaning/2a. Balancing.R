@@ -291,6 +291,9 @@ comparison_table[, c("Model","Recall","Precision", "F1", "Balanced Accuracy")] %
   data.table() %>% 
   arrange(desc(Recall))
 
+comparison_table[, c( "Model", "F1" ,"Recall", "Precision", "Balanced Accuracy")] %>% 
+  data.table() %>% 
+  arrange(desc(F1))
 
 # Pick Random undersampling as this has the best precision and better metrics compared to Tomek
 

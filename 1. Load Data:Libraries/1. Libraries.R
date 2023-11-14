@@ -29,9 +29,15 @@ data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//c
 #this data is created in the cleaning.R file
 scaled_data <- read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//scaled_creditcard.csv")
 
-#load balanced data
-balanced_train_data <- data.frame(read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_train_creditcard.csv"))
 
+#load balanced data
+#this data is created in the cleaning.R file
+nearmiss_train_data <- data.frame(read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//nearmiss_train_creditcard.csv"))
+tomek_train_data <- data.frame(read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//tomek_train_creditcard.csv"))
+smote_train_data <- data.frame(read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//smote_train_creditcard.csv"))
+
+#load test data
+#this data is created in the cleaning.R file
 test_data<- data.frame(read_csv("//Users//zachbushby//Documents//Uni//Career//Projects//Data//test_creditcard.csv"))
 
 
