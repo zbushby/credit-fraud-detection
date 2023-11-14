@@ -91,68 +91,6 @@ XGBoost amazing performance may be due to its robust handling of complex, non-li
 
 
 ## Extras:
-#### Confusion Matrices of Models:
-
-##### Quadratic Discriminant Analysis (QDA)
-| Prediction \ Reference |     0   |   1    |
-|------------------------|---------|--------|
-| 0                      | 53,850  |   10   |
-| 1                      | 3,003   |   99   |
-
-##### Linear Discriminant Analysis (LDA)
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 56,122  |   11   |
-| 1                      |   731   |   98   |
-
-##### Logistic Regression (GLM)
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 56,366  |    7   |
-| 1                      |   487   |  102   |
-
-##### Random Forest
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 54,435  |    7   |
-| 1                      |  2,418  |  102   |
-
-##### Support Vector Machine
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 55,669  |    9   |
-| 1                      |  1,184  |  100   |
-
-##### Naive Bayes Classifer
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 54,927  |   17   |
-| 1                      |  1,926  |   92   |
-
-##### Kth Nearest Neighbour Classifer (KNN)
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 56,391  |    8   |
-| 1                      |   462   |  101   |
-
-##### Gradient Boosting Machine (GBM)
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 55,296  |    9   |
-| 1                      |  1,557  |  100   |
-
-##### Extreme Gradient Boosing (XGBoost)
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 56,470  |   10   |
-| 1                      |   383   |   99   |
-
-##### Neural Network
-| Prediction \ Reference |    0    |    1   |
-|------------------------|---------|--------|
-| 0                      | 53,187  |    4   |
-| 1                      |  3,666  |  105   |
-
 
 ## Acknowledgements
 The dataset has been collected and analysed during a research collaboration between Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection.
