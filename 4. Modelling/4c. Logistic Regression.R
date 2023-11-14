@@ -10,8 +10,8 @@ test_data$Class <- as.factor(test_data$Class)
 #------------------------------------------------------------------------------
 #model
 # nearmiss_log_model <- glm(Class ~.,data = nearmiss_train_data, family = binomial(link="logit"))
-# saveRDS(nearmiss_log_model, "./nearmiss_log_model.rds")
-nearmiss_log_model <- readRDS("./nearmiss_log_model.rds")
+# saveRDS(nearmiss_log_model, paste0(base_path_data,"nearmiss_log_model.rds"))
+nearmiss_log_model <- readRDS(paste0(base_path_data,"nearmiss_log_model.rds"))
 
 nearmiss_log_pred <- predict(nearmiss_log_model, newdata = test_data, type = "response")
 
@@ -22,8 +22,8 @@ nearmiss_log_cmatrix <- confusionMatrix(data = as.factor(as.numeric(nearmiss_log
 #------------------------------------------------------------------------------
 #model
 # smote_log_model <- glm(Class ~.,data = smote_train_data, family = binomial(link="logit"))
-# saveRDS(smote_log_model, "./smote_log_model.rds")
-smote_log_model <- readRDS("./smote_log_model.rds")
+# saveRDS(smote_log_model, paste0(base_path_data,"smote_log_model.rds"))
+smote_log_model <- readRDS(paste0(base_path_data,"smote_log_model.rds"))
 
 smote_log_pred <- predict(smote_log_model, newdata = test_data, type = "response")
 
@@ -36,8 +36,8 @@ smote_log_cmatrix <- confusionMatrix(data = as.factor(as.numeric(smote_log_pred 
 #------------------------------------------------------------------------------
 #model
 # tomek_log_model <- glm(Class ~.,data = tomek_train_data, family = binomial(link="logit"))
-# saveRDS(tomek_log_model, "./tomek_log_model.rds")
-tomek_log_model <- readRDS("./tomek_log_model.rds")
+# saveRDS(tomek_log_model, paste0(base_path_data,"tomek_log_model.rds"))
+tomek_log_model <- readRDS(paste0(base_path_data,"tomek_log_model.rds"))
 
 tomek_log_pred <- predict(tomek_log_model, newdata = test_data, type = "response")
 

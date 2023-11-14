@@ -20,8 +20,8 @@ nearmiss_knn_test_labels <- test_data[,31]
 #   cl = nearmiss_knn_train_labels, 
 #   k=27
 # )
-# saveRDS(nearmiss_knn_pred, "./nearmiss_knn_pred.rds")
-nearmiss_knn_pred <- readRDS("./nearmiss_knn_pred.rds")
+# saveRDS(nearmiss_knn_pred, paste0(base_path_data,"nearmiss_knn_pred.rds"))
+nearmiss_knn_pred <- readRDS(paste0(base_path_data,"nearmiss_knn_pred.rds"))
 
 nearmiss_knn_cmatrix <- confusionMatrix(data = as.factor(nearmiss_knn_pred),reference = as.factor(nearmiss_knn_test_labels))
 
@@ -43,8 +43,8 @@ nearmiss_knn_cmatrix <- confusionMatrix(data = as.factor(nearmiss_knn_pred),refe
 #   cl = smote_knn_train_labels, 
 #   k=674
 # )
-# saveRDS(smote_knn_pred, "./smote_knn_pred.rds")
-# smote_knn_pred <- readRDS("./smote_knn_pred.rds")
+# saveRDS(smote_knn_pred, paste0(base_path_data,"smote_knn_pred.rds"))
+# smote_knn_pred <- readRDS(paste0(base_path_data,"smote_knn_pred.rds"))
 # 
 # smote_knn_cmatrix <- confusionMatrix(data = as.factor(smote_knn_pred),reference = as.factor(smote_knn_test_labels))
 
@@ -63,8 +63,8 @@ tomek_knn_test_labels <- test_data[,31]
 #   cl = tomek_knn_train_labels, 
 #   k=477
 # )
-# saveRDS(tomek_knn_pred, "./tomek_knn_pred.rds")
-tomek_knn_pred <- readRDS("./tomek_knn_pred.rds")
+# saveRDS(tomek_knn_pred, paste0(base_path_data,"tomek_knn_pred.rds"))
+tomek_knn_pred <- readRDS(paste0(base_path_data,"tomek_knn_pred.rds"))
 
 tomek_knn_cmatrix <- confusionMatrix(data = as.factor(tomek_knn_pred),reference = as.factor(tomek_knn_test_labels))
 

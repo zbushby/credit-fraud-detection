@@ -9,8 +9,8 @@ test_data$Class <- as.factor(test_data$Class)
 #nearmiss Data
 #------------------------------------------------------------------------------
 # nearmiss_nb_model <- naiveBayes(Class ~ ., data = nearmiss_train_data)
-# saveRDS(nearmiss_nb_model, "./nearmiss_nb_model.rds")
-nearmiss_nb_model <- readRDS("./nearmiss_nb_model.rds")
+# saveRDS(nearmiss_nb_model, paste0(base_path_data,"nearmiss_nb_model.rds"))
+nearmiss_nb_model <- readRDS(paste0(base_path_data,"nearmiss_nb_model.rds"))
 
 nearmiss_nb_pred <- predict(nearmiss_nb_model, test_data)
 nearmiss_nb_cmatrix <- confusionMatrix(data = as.factor(nearmiss_nb_pred),reference = as.factor(test_data$Class))
@@ -18,8 +18,8 @@ nearmiss_nb_cmatrix <- confusionMatrix(data = as.factor(nearmiss_nb_pred),refere
 #SMOTE Data
 #------------------------------------------------------------------------------
 # smote_nb_model <- naiveBayes(Class ~ ., data = smote_train_data)
-# saveRDS(smote_nb_model, "./smote_nb_model.rds")
-smote_nb_model <- readRDS("./smote_nb_model.rds")
+# saveRDS(smote_nb_model, paste0(base_path_data,"smote_nb_model.rds"))
+smote_nb_model <- readRDS(paste0(base_path_data,"smote_nb_model.rds"))
 
 smote_nb_pred <- predict(smote_nb_model, test_data)
 smote_nb_cmatrix <- confusionMatrix(data = as.factor(smote_nb_pred),reference = as.factor(test_data$Class))
@@ -27,8 +27,8 @@ smote_nb_cmatrix <- confusionMatrix(data = as.factor(smote_nb_pred),reference = 
 #Tomek Links Data
 #------------------------------------------------------------------------------
 # tomek_nb_model <- naiveBayes(Class ~ ., data = tomek_train_data)
-# saveRDS(tomek_nb_model, "./tomek_nb_model.rds")
-tomek_nb_model <- readRDS("./tomek_nb_model.rds")
+# saveRDS(tomek_nb_model, paste0(base_path_data,"tomek_nb_model.rds"))
+tomek_nb_model <- readRDS(paste0(base_path_data,"tomek_nb_model.rds"))
 
 tomek_nb_pred <- predict(tomek_nb_model, test_data)
 tomek_nb_cmatrix <- confusionMatrix(data = as.factor(tomek_nb_pred),reference = as.factor(test_data$Class))

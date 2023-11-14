@@ -12,13 +12,13 @@ xgboost_test = xgb.DMatrix(data=X_test, label=y_test)
 
 
 #model
-nearmiss_xgb_model <- xgboost(data = nearmiss_xgboost_train, max.depth = 3, nrounds = 50, objective = "binary:logistic", eval_metric = "logloss")
-saveRDS(nearmiss_xgb_model, "./nearmiss_xgb_model.rds")
-nearmiss_xgb_model <- readRDS("./nearmiss_xgb_model.rds")
+# nearmiss_xgb_model <- xgboost(data = nearmiss_xgboost_train, max.depth = 3, nrounds = 50, objective = "binary:logistic", eval_metric = "logloss")
+# saveRDS(nearmiss_xgb_model, paste0(base_path_data,"nearmiss_xgb_model.rds"))
+nearmiss_xgb_model <- readRDS(paste0(base_path_data,"nearmiss_xgb_model.rds"))
 #summary(xgb_model)
 
 nearmiss_xgb_pred = predict(nearmiss_xgb_model, xgboost_test)
-nearmiss_xgb_pred <- ifelse(nearmiss_xgb_pred > 0.9, 1, 0) #used 0.9 as per threshold optimisation below
+nearmiss_xgb_pred <- ifelse(nearmiss_xgb_pred > 0.1, 1, 0) #used 0.9 as per threshold optimisation below
 
 #confusion matrix
 nearmiss_xgb_cmatrix <- confusionMatrix(data = as.factor(nearmiss_xgb_pred), reference = as.factor(test_data$Class))
@@ -35,13 +35,13 @@ xgboost_test = xgb.DMatrix(data=X_test, label=y_test)
 
 
 #model
-smote_xgb_model <- xgboost(data = smote_xgboost_train, max.depth = 3, nrounds = 50, objective = "binary:logistic", eval_metric = "logloss")
-saveRDS(smote_xgb_model, "./smote_xgb_model.rds")
-smote_xgb_model <- readRDS("./smote_xgb_model.rds")
+# smote_xgb_model <- xgboost(data = smote_xgboost_train, max.depth = 3, nrounds = 50, objective = "binary:logistic", eval_metric = "logloss")
+# saveRDS(smote_xgb_model, paste0(base_path_data,"smote_xgb_model.rds"))
+smote_xgb_model <- readRDS(paste0(base_path_data,"smote_xgb_model.rds"))
 #summary(xgb_model)
 
 smote_xgb_pred = predict(smote_xgb_model, xgboost_test)
-smote_xgb_pred <- ifelse(smote_xgb_pred > 0.9, 1, 0) #used 0.9 as per threshold optimisation below
+smote_xgb_pred <- ifelse(smote_xgb_pred > 0.1, 1, 0) #used 0.9 as per threshold optimisation below
 
 #confusion matrix
 smote_xgb_cmatrix <- confusionMatrix(data = as.factor(smote_xgb_pred), reference = as.factor(test_data$Class))
@@ -58,13 +58,13 @@ xgboost_test = xgb.DMatrix(data=X_test, label=y_test)
 
 
 #model
-tomek_xgb_model <- xgboost(data = tomek_xgboost_train, max.depth = 3, nrounds = 50, objective = "binary:logistic", eval_metric = "logloss")
-saveRDS(tomek_xgb_model, "./tomek_xgb_model.rds")
-tomek_xgb_model <- readRDS("./tomek_xgb_model.rds")
+# tomek_xgb_model <- xgboost(data = tomek_xgboost_train, max.depth = 3, nrounds = 50, objective = "binary:logistic", eval_metric = "logloss")
+# saveRDS(tomek_xgb_model, paste0(base_path_data,"tomek_xgb_model.rds"))
+tomek_xgb_model <- readRDS(paste0(base_path_data,"tomek_xgb_model.rds"))
 #summary(xgb_model)
 
 tomek_xgb_pred = predict(tomek_xgb_model, xgboost_test)
-tomek_xgb_pred <- ifelse(tomek_xgb_pred > 0.9, 1, 0) #used 0.9 as per threshold optimisation below
+tomek_xgb_pred <- ifelse(tomek_xgb_pred > 0.1, 1, 0) #used 0.9 as per threshold optimisation below
 
 #confusion matrix
 tomek_xgb_cmatrix <- confusionMatrix(data = as.factor(tomek_xgb_pred), reference = as.factor(test_data$Class))

@@ -7,8 +7,8 @@
 # nearmiss_lda_model <- MASS::lda(Class ~ ., 
 #                                 data = nearmiss_train_data, 
 #                                 method = "mle")
-# saveRDS(nearmiss_lda_model, "./nearmiss_lda_model.rds")
-nearmiss_lda_model <- readRDS("./nearmiss_lda_model.rds")
+# saveRDS(nearmiss_lda_model, paste0(base_path_data,"nearmiss_lda_model.rds"))
+nearmiss_lda_model <- readRDS(paste0(base_path_data,"nearmiss_lda_model.rds"))
 
 #pred
 nearmiss_lda_pred <- predict(nearmiss_lda_model, newdata = test_data)$class
@@ -26,8 +26,8 @@ set.seed(123)
 # smote_lda_model <- MASS::lda(Class ~ ., 
 #                              data = smote_train_data, 
 #                              method = "mle")
-# saveRDS(smote_lda_model, "./smote_lda_model.rds")
-smote_lda_model <- readRDS("./smote_lda_model.rds")
+# saveRDS(smote_lda_model, paste0(base_path_data,"smote_lda_model.rds"))
+smote_lda_model <- readRDS(paste0(base_path_data,"smote_lda_model.rds"))
 
 #pred
 smote_lda_pred <- predict(smote_lda_model, newdata = test_data)$class
@@ -42,8 +42,8 @@ smote_lda_cmatrix <- confusionMatrix(data = as.factor(smote_lda_pred),
 # tomek_lda_model <- MASS::lda(Class ~ ., 
 #                              data = tomek_train_data, 
 #                              method = "mle")
-# saveRDS(tomek_lda_model, "./tomek_lda_model.rds")
-tomek_lda_model <- readRDS("./tomek_lda_model.rds")
+# saveRDS(tomek_lda_model, paste0(base_path_data,"tomek_lda_model.rds"))
+tomek_lda_model <- readRDS(paste0(base_path_data,"tomek_lda_model.rds"))
 
 #pred
 tomek_lda_pred <- predict(tomek_lda_model, newdata = test_data)$class

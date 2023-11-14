@@ -5,7 +5,7 @@
 #base_path_data <- "C:\\Users\\zbush\\Documents\\GitHub\\Data\\"
 #mac
 base_path_project <- "//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//"
-base_path_data <- "//Users//zachbushby//Documents//edu//data_science//Projects//Data//"
+base_path_data <- "//Users//zachbushby//Documents//edu//data_science//Projects//Data//Credit Fraud Detection//"
 
 
 #installs and loads any libraries not already installed and loaded
@@ -17,7 +17,7 @@ source(paste0(base_path_project,"1. Load Data_Libraries//1. Libraries.R"))
 
 #loads all training + testing datasets
 base_path_project <- "//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//"
-base_path_data <- "//Users//zachbushby//Documents//edu//data_science//Projects//Data//"
+base_path_data <- "//Users//zachbushby//Documents//edu//data_science//Projects//Data//Credit Fraud Detection//"
 source(paste0(base_path_project,"4. Modelling//4.1 Train_Test_Data.R"))
 
 #Does all comparisons

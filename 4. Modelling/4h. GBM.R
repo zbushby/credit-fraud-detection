@@ -46,15 +46,15 @@ test_data$Class <- as.factor(test_data$Class)
 #nearmiss Data
 #------------------------------------------------------------------------------
 #train gbm
-nearmiss_gbm_model = gbm(nearmiss_train_data$Class ~.,
-                data = nearmiss_train_data,
-                distribution = "multinomial",
-                cv.folds = 10,
-                shrinkage = .01,
-                n.minobsinnode = 10,
-                n.trees = 50)
-saveRDS(nearmiss_gbm_model, "./nearmiss_gbm_model.rds")
-nearmiss_gbm_model <- readRDS("./nearmiss_gbm_model.rds")
+# nearmiss_gbm_model = gbm(nearmiss_train_data$Class ~.,
+#                 data = nearmiss_train_data,
+#                 distribution = "multinomial",
+#                 cv.folds = 10,
+#                 shrinkage = .01,
+#                 n.minobsinnode = 10,
+#                 n.trees = 50)
+# saveRDS(nearmiss_gbm_model, paste0(base_path_data,"nearmiss_gbm_model.rds"))
+nearmiss_gbm_model <- readRDS(paste0(base_path_data,"nearmiss_gbm_model.rds"))
 
 #print(nearmiss_gbm_model)
 #summary(nearmiss_gbm_model)
@@ -73,15 +73,15 @@ nearmiss_gbm_cmatrix <- confusionMatrix(data = as.factor(class_names), reference
 #SMOTE Data
 #------------------------------------------------------------------------------
 #train gbm
-smote_gbm_model = gbm(smote_train_data$Class ~.,
-                         data = smote_train_data,
-                         distribution = "multinomial",
-                         cv.folds = 10,
-                         shrinkage = .01,
-                         n.minobsinnode = 10,
-                         n.trees = 50)
-saveRDS(smote_gbm_model, "./smote_gbm_model.rds")
-smote_gbm_model <- readRDS("./smote_gbm_model.rds")
+# smote_gbm_model = gbm(smote_train_data$Class ~.,
+#                          data = smote_train_data,
+#                          distribution = "multinomial",
+#                          cv.folds = 10,
+#                          shrinkage = .01,
+#                          n.minobsinnode = 10,
+#                          n.trees = 50)
+# saveRDS(smote_gbm_model, paste0(base_path_data,"smote_gbm_model.rds"))
+smote_gbm_model <- readRDS(paste0(base_path_data,"smote_gbm_model.rds"))
 
 #print(smote_gbm_model)
 #summary(smote_gbm_model)
@@ -102,15 +102,15 @@ smote_gbm_cmatrix <- confusionMatrix(data = as.factor(class_names), reference = 
 #Tomek Links Data
 #------------------------------------------------------------------------------
 #train gbm
-tomek_gbm_model = gbm(tomek_train_data$Class ~.,
-                         data = tomek_train_data,
-                         distribution = "multinomial",
-                         cv.folds = 10,
-                         shrinkage = .01,
-                         n.minobsinnode = 10,
-                         n.trees = 50)
-saveRDS(tomek_gbm_model, "./tomek_gbm_model.rds")
-tomek_gbm_model <- readRDS("./tomek_gbm_model.rds")
+# tomek_gbm_model = gbm(tomek_train_data$Class ~.,
+#                          data = tomek_train_data,
+#                          distribution = "multinomial",
+#                          cv.folds = 10,
+#                          shrinkage = .01,
+#                          n.minobsinnode = 10,
+#                          n.trees = 50)
+# saveRDS(tomek_gbm_model, paste0(base_path_data,"tomek_gbm_model.rds"))
+tomek_gbm_model <- readRDS(paste0(base_path_data,"tomek_gbm_model.rds"))
 
 #print(tomek_gbm_model)
 #summary(tomek_gbm_model)

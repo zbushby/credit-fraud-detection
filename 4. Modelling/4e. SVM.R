@@ -13,8 +13,8 @@ test_data$Class <- as.factor(test_data$Class)
 #                kernel = "linear",
 #                cost = 1,
 #                scale = FALSE)
-# saveRDS(nearmiss_linear_svm_model, "./nearmiss_linear_svm_model.rds")
-nearmiss_linear_svm_model <- readRDS("./nearmiss_linear_svm_model.rds")
+# saveRDS(nearmiss_linear_svm_model, paste0(base_path_data,"nearmiss_linear_svm_model.rds"))
+nearmiss_linear_svm_model <- readRDS(paste0(base_path_data,"nearmiss_linear_svm_model.rds"))
 
 nearmiss_linear_svm_pred <- predict(nearmiss_linear_svm_model, newdata = test_data, type = "response")
 nearmiss_linear_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_linear_svm_pred),reference = as.factor(test_data$Class))
@@ -27,8 +27,8 @@ nearmiss_linear_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_linear_
 #                  kernel = "polynomial",
 #                  cost = 1,
 #                  scale = FALSE)
-# saveRDS(nearmiss_poly_svm_model, "./nearmiss_poly_svm_model.rds")
-nearmiss_poly_svm_model <- readRDS("./nearmiss_poly_svm_model.rds")
+# saveRDS(nearmiss_poly_svm_model, paste0(base_path_data,"nearmiss_poly_svm_model.rds"))
+nearmiss_poly_svm_model <- readRDS(paste0(base_path_data,"nearmiss_poly_svm_model.rds"))
 
 nearmiss_poly_svm_pred <- predict(nearmiss_poly_svm_model, newdata = test_data, type = "response")
 nearmiss_poly_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_poly_svm_pred),reference = as.factor(test_data$Class))
@@ -39,8 +39,8 @@ nearmiss_poly_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_poly_svm_
 #                  kernel = "radial",
 #                  cost = 1,
 #                  scale = FALSE)
-# saveRDS(nearmiss_radial_svm_model, "./nearmiss_radial_svm_model.rds")
-nearmiss_radial_svm_model <- readRDS("./nearmiss_radial_svm_model.rds")
+# saveRDS(nearmiss_radial_svm_model, paste0(base_path_data,"nearmiss_radial_svm_model.rds"))
+nearmiss_radial_svm_model <- readRDS(paste0(base_path_data,"nearmiss_radial_svm_model.rds"))
 
 nearmiss_radial_svm_pred <- predict(nearmiss_radial_svm_model, newdata = test_data, type = "response")
 nearmiss_radial_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_radial_svm_pred),reference = as.factor(test_data$Class))
@@ -57,8 +57,8 @@ nearmiss_radial_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_radial_
 #                                  kernel = "linear",
 #                                  cost = 1,
 #                                  scale = FALSE)
-# saveRDS(smote_linear_svm_model, "./smote_linear_svm_model.rds")
-# smote_linear_svm_model <- readRDS("./smote_linear_svm_model.rds")
+# saveRDS(smote_linear_svm_model, paste0(base_path_data,"smote_linear_svm_model.rds"))
+# smote_linear_svm_model <- readRDS(paste0(base_path_data,"smote_linear_svm_model.rds"))
 # 
 # smote_linear_svm_pred <- predict(smote_linear_svm_model, newdata = test_data, type = "response")
 # smote_linear_svm_cmatrix <- confusionMatrix(data = as.factor(smote_linear_svm_pred),reference = as.factor(test_data$Class))
@@ -71,8 +71,8 @@ nearmiss_radial_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_radial_
 #                                kernel = "polynomial",
 #                                cost = 1,
 #                                scale = FALSE)
-# saveRDS(smote_poly_svm_model, "./smote_poly_svm_model.rds")
-# smote_poly_svm_model <- readRDS("./smote_poly_svm_model.rds")
+# saveRDS(smote_poly_svm_model, paste0(base_path_data,"smote_poly_svm_model.rds"))
+# smote_poly_svm_model <- readRDS(paste0(base_path_data,"smote_poly_svm_model.rds"))
 # 
 # smote_poly_svm_pred <- predict(smote_poly_svm_model, newdata = test_data, type = "response")
 # smote_poly_svm_cmatrix <- confusionMatrix(data = as.factor(smote_poly_svm_pred),reference = as.factor(test_data$Class))
@@ -83,8 +83,8 @@ nearmiss_radial_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_radial_
 #                                  kernel = "radial",
 #                                  cost = 1,
 #                                  scale = FALSE)
-# saveRDS(smote_radial_svm_model, "./smote_radial_svm_model.rds")
-# smote_radial_svm_model <- readRDS("./smote_radial_svm_model.rds")
+# saveRDS(smote_radial_svm_model, paste0(base_path_data,"smote_radial_svm_model.rds"))
+# smote_radial_svm_model <- readRDS(paste0(base_path_data,"smote_radial_svm_model.rds"))
 # 
 # smote_radial_svm_pred <- predict(smote_radial_svm_model, newdata = test_data, type = "response")
 # smote_radial_svm_cmatrix <- confusionMatrix(data = as.factor(smote_radial_svm_pred),reference = as.factor(test_data$Class))
@@ -99,8 +99,8 @@ nearmiss_radial_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_radial_
 #                               kernel = "linear",
 #                               cost = 1,
 #                               scale = FALSE)
-# saveRDS(tomek_linear_svm_model, "./tomek_linear_svm_model.rds")
-# tomek_linear_svm_model <- readRDS("./tomek_linear_svm_model.rds")
+# saveRDS(tomek_linear_svm_model, paste0(base_path_data,"tomek_linear_svm_model.rds"))
+# tomek_linear_svm_model <- readRDS(paste0(base_path_data,"tomek_linear_svm_model.rds"))
 # 
 # tomek_linear_svm_pred <- predict(tomek_linear_svm_model, newdata = test_data, type = "response")
 # tomek_linear_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_linear_svm_pred),reference = as.factor(test_data$Class))
@@ -113,8 +113,8 @@ nearmiss_radial_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_radial_
 #                             kernel = "polynomial",
 #                             cost = 1,
 #                             scale = FALSE)
-# saveRDS(tomek_poly_svm_model, "./tomek_poly_svm_model.rds")
-# tomek_poly_svm_model <- readRDS("./tomek_poly_svm_model.rds")
+# saveRDS(tomek_poly_svm_model, paste0(base_path_data,"tomek_poly_svm_model.rds"))
+# tomek_poly_svm_model <- readRDS(paste0(base_path_data,"tomek_poly_svm_model.rds"))
 # 
 # tomek_poly_svm_pred <- predict(tomek_poly_svm_model, newdata = test_data, type = "response")
 # tomek_poly_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_poly_svm_pred),reference = as.factor(test_data$Class))
@@ -125,8 +125,8 @@ nearmiss_radial_svm_cmatrix <- confusionMatrix(data = as.factor(nearmiss_radial_
 #                               kernel = "radial",
 #                               cost = 1,
 #                               scale = FALSE)
-# saveRDS(tomek_radial_svm_model, "./tomek_radial_svm_model.rds")
-# tomek_radial_svm_model <- readRDS("./tomek_radial_svm_model.rds")
+# saveRDS(tomek_radial_svm_model, paste0(base_path_data,"tomek_radial_svm_model.rds"))
+# tomek_radial_svm_model <- readRDS(paste0(base_path_data,"tomek_radial_svm_model.rds"))
 # 
 # tomek_radial_svm_pred <- predict(tomek_radial_svm_model, newdata = test_data, type = "response")
 # tomek_radial_svm_cmatrix <- confusionMatrix(data = as.factor(tomek_radial_svm_pred),reference = as.factor(test_data$Class))
