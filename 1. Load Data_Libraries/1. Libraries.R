@@ -22,27 +22,28 @@ for (pkg in packages) {
 #set seed
 set.seed(123)
 
+# Define the base path
+base_path_project <- "//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//"
+base_path_data <- "//Users//zachbushby//Documents//edu//data_science//Projects//Data//"
+
+
 #load data
 #find the data on kaggle: 
-data <- read_csv("//Users//zachbushby//Documents//edu//data_science//Projects//Data//creditcard.csv")
+
+data <- read_csv(paste0(base_path_data, "creditcard.csv"))
 
 #download all train + test datasets
-source("//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//2. Cleaning//2. Cleaning.R")
-
+source(paste0(base_path_project,"2. Cleaning//2. Cleaning.R"))
 
 # If you have have downloaded the train and test files
-
-scaled_data <- read_csv("//Users//zachbushby//Documents//edu//data_science//Projects//Data//scaled_creditcard.csv")
-
-#load balanced data
-nearmiss_train_data <- data.frame(read_csv("//Users//zachbushby//Documents//edu//data_science//Projects//Data//nearmiss_train_creditcard.csv"))
-tomek_train_data <- data.frame(read_csv("//Users//zachbushby//Documents//edu//data_science//Projects//Data//tomek_train_creditcard.csv"))
-smote_train_data <- data.frame(read_csv("//Users//zachbushby//Documents//edu//data_science//Projects//Data//smote_train_creditcard.csv"))
-
-#load test data
-test_data<- data.frame(read_csv("//Users//zachbushby//Documents//edu//data_science//Projects//Data//test_creditcard.csv"))
+# Use the base path with different file names
+scaled_data <- read_csv(paste0(base_path_data, "scaled_creditcard.csv"))
 
 
+# Load balanced data
+nearmiss_train_data <- data.frame(read_csv(paste0(base_path_data, "nearmiss_train_creditcard.csv")))
+tomek_train_data <- data.frame(read_csv(paste0(base_path_data, "tomek_train_creditcard.csv")))
+smote_train_data <- data.frame(read_csv(paste0(base_path_data, "smote_train_creditcard.csv")))
 
-
-
+# Load test data
+test_data <- data.frame(read_csv(paste0(base_path_data, "test_creditcard.csv")))
