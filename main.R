@@ -28,7 +28,7 @@ source(paste0(base_path_project,"4. Modelling//4. Comparison.R"))
 all_models %>%
   dplyr::select(Model, F1, Precision, Recall, `Balanced.Accuracy`, Sensitivity, Method) %>% 
   dplyr::arrange(desc(F1)) %>% 
-  top_n(n=10)
+  head()
 
 #f1, precision, recall, balanced accuracy, sensitivity, (ranked by f1):
 
@@ -39,7 +39,7 @@ all_models %>%
 
 all_models %>%
   dplyr::select(Model, F1, Precision, Recall, `Balanced.Accuracy`, Sensitivity, Method) %>%
-  dplyr::filter(Method == "Tomek Links") %>% 
+  dplyr::filter(Method == "SMOTE") %>% 
   dplyr::arrange(desc(F1))
 
 all_models %>%
