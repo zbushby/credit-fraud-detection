@@ -143,6 +143,30 @@ From Scaled Data
 - **Ensemble methods:** The most successful models in this data trend are ensemble methods, particularly Random Forest and XGBoost. These models excel in complex datasets such as credit card fraud by combining diverse models to reduce overfitting, handle imbalanced data, and enhance generalisation through error correction and flexible model combinations.
 
 
+#### Confusion Matrices of Top 3:
+
+**Random Forest**
+
+| Reference / Prediction | 0    | 1   |
+|------------------------|------|-----|
+| 0                      | 56852| 23  |
+| 1                      | 3    | 84  |
+``
+
+**XGBoost**
+
+| Reference / Prediction | 0    | 1   |
+|------------------------|------|-----|
+| 0                      | 56853| 25  |
+| 1                      | 2    | 82  |
+
+**Single Layer Neural Network**
+
+| Reference / Prediction | 0    | 1   |
+|------------------------|------|-----|
+| 0                      | 56848| 28  |
+| 1                      | 7    | 79  |
+
 
 ## Acknowledgements
 The dataset has been collected and analysed during a research collaboration between Worldline and the Machine Learning Group (http://mlg.ulb.ac.be) of ULB (Université Libre de Bruxelles) on big data mining and fraud detection.
