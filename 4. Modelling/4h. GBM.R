@@ -45,14 +45,14 @@ gbm_model = gbm(balanced_train_data$Class ~.,
                 cv.folds = 10,
                 shrinkage = .01,
                 n.minobsinnode = 10,
-                n.trees = 500)
+                n.trees = 50)
 
 print(gbm_model)
 summary(gbm_model)
 
 gbm_pred = predict.gbm(object = gbm_model,
                         newdata = test_data[,1:30],
-                        n.trees = 500,           # 500 tress to be built
+                        n.trees = 50,           # 500 tress to be built
                         type = "response")
 
 class_names = as.numeric(colnames(gbm_pred)[apply(gbm_pred, 1, which.max)])

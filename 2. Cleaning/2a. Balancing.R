@@ -277,8 +277,9 @@ print(comparison_table)
 #Balanced Accuracy, F1 Score, precision, Recall
 comparison_table <- as.data.frame(comparison_table)
 comparison_table <- comparison_table %>%
-  rownames_to_column(var = "Model") %>%
-  select(Model, Precision, F1, Recall, `Balanced Accuracy`)
+  as.data.frame() %>% 
+  tibble::rownames_to_column(var = "Model") %>%
+  dplyr::select(Model, Precision, F1, Recall, `Balanced Accuracy`)
 
 #Since positive class is more important according to Kaggle use Precision or Recall
 # Hence, 
