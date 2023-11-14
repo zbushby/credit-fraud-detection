@@ -16,8 +16,17 @@ This dataset presents transactions that occurred in two days, where we have 492 
 It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, Kaggle cannot provide the original features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependent cost-sensitive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 
 ## Cleaning
-Balanced the Datasets by random undersampling as this method had the best precision when modelling through a logistic regression. Comparison of undersampling, oversampling, Tomek, SMOTE, SMOTEtomek, near miss and no method can be found in the [Balancing.R file](https://github.com/zbushby/credit-fraud-detection/blob/main/2.%20Cleaning/2a.%20Balancing.R)
+Comparison of undersampling, oversampling, Tomek, SMOTE, SMOTEtomek, near miss and no method can be found in the [Balancing.R file](https://github.com/zbushby/credit-fraud-detection/blob/main/2.%20Cleaning/2a.%20Balancing.R). The comparison was achieved by using these methods on the training dataset for a logisitc regression and comparing results through the test data. I have created training datasets using Tomek Links (undersampling), SMOTE (oversampling) and near miss (undersampling).
 
+| Method     | F1         | Recall     | Precision  | Balanced Accuracy |
+|------------|------------|------------|------------|-------------------|
+| Tomek      | 0.9995341  | 0.9998593  | 0.9992090  | 0.7896493         |
+| Regular    | 0.9995165  | 0.9998241  | 0.9992090  | 0.7896317         |
+| Over       | 0.9892200  | 0.9788937  | 0.9997665  | 0.9286992         |
+| SMOTE      | 0.9882579  | 0.9770117  | 0.9997660  | 0.9277582         |
+| SMOTETomek | 0.9881769  | 0.9768534  | 0.9997660  | 0.9276790         |
+| Under      | 0.9842914  | 0.9692903  | 0.9997642  | 0.9238975         |
+| NearMiss   | 0.9809143  | 0.9627298  | 0.9997991  | 0.9299630         |
 
 ## EDA
 [EDA Report on Given Data](https://htmlpreview.github.io/?https://github.com/zbushby/credit-fraud-detection/blob/main/3.%20EDA/report.html#correlation-analysis)
