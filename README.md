@@ -55,10 +55,10 @@ From Scaled Data
 #### Random Forest
 - 50 trees 
 #### Support Vector Machine
-- Polynomial kernal had the best performance
+- As SVM as O(n^3) couldn't use on SMOTE and Tomek Links data as SMOTE is 590x bigger than near miss
 #### Naive Bayes Classifer
 #### Kth Nearest Neighbour Classifer (KNN)
-- k = 27
+- Couldn't use SMOTE due to its oversampling property and hence duplicate values. 
 #### Gradient Boosting Machine (GBM)
 - Training attributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
 #### Extreme Gradient Boosing (XGBoost)
@@ -131,13 +131,19 @@ From Scaled Data
 |  2 layer Neural Net           |  0.9686318   |  0.9998128   |  0.9393369    |  0.9229395        |  0.9393369    | Near Miss     |
 |             QDA               |  0.9648613   |  0.9997171   |  0.9323542    |  0.8960837        |  0.9323542    | Near Miss     |
 
+Key Points:
 
+- Best Performing Model: The Random Forest model outperformed others, especially on the Tomek Links dataset, due to its strong handling of unbalanced data and robustness against overfitting.
 
+- Neural Networks and Data Sensitivity: Neural networks showed varying results, performing well with Tomek Links and SMOTE but less effectively with the Near Miss dataset, likely due to data loss impacting their learning capability. Neural Networks rely on rich sets of data to capture complex patterns.
 
+- Impact of Data Balancing Techniques: The effectiveness of models varied significantly with different data balancing methods, indicating the importance of choosing the right preprocessing technique for each model.
 
+- Universal Overfitting Concern: All models risk overfitting in imbalanced fraud detection datasets, especially when trained on heavily preprocessed data which underscoring the need for better validation and testing. Cross Validation in the future.
 
+- Ensemble methods: The most successful models in this data trend are ensemble methods, particularly Random Forest and XGBoost. These models excel in complex datasets such as credit card fraud by combining diverse models to reduce overfitting, handle imbalanced data, and enhance generalisation through error correction and flexible model combinations.
 
-## Hyperparameter Tuning of XGBoost
+## Summary
 
 
 ## Extras:
