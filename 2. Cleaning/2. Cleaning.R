@@ -59,7 +59,7 @@ write.csv(tomek_train_data, file = "//Users//zachbushby//Documents//Uni//Career/
 smote_train_data <- SMOTE(X = train_data[, -31], target = train_data$Class, K = 5, dup_size = 0)
 smote_train_data <- train_smote_sample$data
 
-write.csv(smote_train_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_train_creditcard.csv", row.names = FALSE)
+write.csv(smote_train_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//smote_train_creditcard.csv", row.names = FALSE)
 
 
 #Nearmiss train data
@@ -74,7 +74,7 @@ train_nearmiss_data <- recipe(~., nearmiss_train_data) %>%
 colnames(nearmiss_train_data)[31] <- 'Class'
 
 
-write.csv(nearmiss_train_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//balanced_train_creditcard.csv", row.names = FALSE)
+write.csv(nearmiss_train_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//nearmiss_train_creditcard.csv", row.names = FALSE)
 
 #test data
 write.csv(test_data, file = "//Users//zachbushby//Documents//Uni//Career//Projects//Data//test_creditcard.csv", row.names = FALSE)
