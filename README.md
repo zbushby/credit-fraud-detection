@@ -78,7 +78,7 @@ Key Findings
 | QDA                | 0.9727855 | 0.9998143 | 0.9471796| 0.9277182         | 0.9471796   |
 | Neural Network     | 0.9666497 | 0.9999248 | 0.9355179| 0.9494103         | 0.9355179   |
 
-XGBoost amazing performance may be due to its robust handling of complex, non-linear data patterns and its effectiveness in managing imbalanced datasets through regularization and focused iterative improvement. 
+XGBoost amazing performance may be due to its robust handling of complex, non-linear data patterns and its effectiveness in managing imbalanced datasets through regularisation and focused iterative improvement. 
 
 ## Hyperparameter Tuning of XGBoost
 
