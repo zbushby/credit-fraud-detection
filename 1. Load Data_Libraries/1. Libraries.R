@@ -23,6 +23,10 @@ for (pkg in packages) {
 set.seed(123)
 
 # Define the base path
+#using my pc
+#base_path_project <- "C:\\Users\\zbush\\Documents\\GitHub\\credit-fraud-detection\\"
+#base_path_data <- "C:\\Users\\zbush\\Documents\\GitHub\\Data\\"
+#mac
 base_path_project <- "//Users//zachbushby//Documents//edu//data_science//Projects//Credit Fraud Detection//"
 base_path_data <- "//Users//zachbushby//Documents//edu//data_science//Projects//Data//"
 
