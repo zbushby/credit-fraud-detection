@@ -16,7 +16,9 @@ This dataset presents transactions that occurred in two days, where we have 492 
 It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, Kaggle cannot provide the original features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependent cost-sensitive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 
 ## Cleaning
-Comparison of undersampling, oversampling, Tomek, SMOTE, SMOTEtomek, near miss and no method can be found in the [Balancing.R file](https://github.com/zbushby/credit-fraud-detection/blob/main/2.%20Cleaning/2a.%20Balancing.R). The comparison was achieved by using these methods on the training dataset for a logisitc regression and comparing results through the test data. I have created training datasets using Tomek Links (undersampling), SMOTE (oversampling) and near miss (undersampling).
+Comparison of undersampling, oversampling, Tomek, SMOTE, SMOTEtomek, near miss and no method can be found in the [Balancing.R file](https://github.com/zbushby/credit-fraud-detection/blob/main/2.%20Cleaning/2a.%20Balancing.R). The comparison was achieved by using these methods on the training dataset for a logisitc regression and comparing results through the test data. 
+- Time and Amount were scaled before using selected methods.
+- I created training datasets using Tomek Links (undersampling) (highest f1 & recall), SMOTE (oversampling) (well-rounded) and near miss (undersampling) (highest balanced accuracy & precision).
 
 | Method     | F1         | Recall     | Precision  | Balanced Accuracy |
 |------------|------------|------------|------------|-------------------|
