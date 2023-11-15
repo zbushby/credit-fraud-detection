@@ -53,7 +53,7 @@ all_models %>%
 #Logistic Regression, QDA, LDA, Random Forest, Naive Bayes, GBM, XGBoost, Single Neural Net, 2 layer Neural Net, Deep Neural Net 
 #smote_confusionmatrices[[""]]
 #Logistic Regression, QDA, LDA, KNN, Random Forest, Naive Bayes, GBM, XGBoost, Single Neural Net, 2 layer Neural Net, Deep Neural Net
-#tomek_confusionmatrices[["XGBoost"]]
+tomek_confusionmatrices[["Single Neural Net"]]
 
 
 
