@@ -52,21 +52,21 @@ From Scaled Data
 - **Quadratic Discriminant Analysis (QDA)**
 - **Linear Discriminant Analysis (LDA)**
 - **Logistic Regression (GLM)**
-- Threshold of 0.9
+  - Threshold of 0.9
 - **Random Forest**
-- 50 trees 
+  - 50 trees 
 - **Support Vector Machine**
-- As SVM as O(n^3) couldn't use on SMOTE and Tomek Links data as SMOTE is 590x bigger than near miss
+  - As SVM as O(n^3) couldn't use on SMOTE and Tomek Links data as SMOTE is 590x bigger than near miss
 - **Naive Bayes Classifer**
 - **Kth Nearest Neighbour Classifer (KNN)**
-- Couldn't use SMOTE due to its oversampling property and hence duplicate values. 
+  - Couldn't use SMOTE due to its oversampling property and hence duplicate values. 
 - **Gradient Boosting Machine (GBM)**
-- Training attributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
+  - Training attributes: Num Trees: 500, 10-fold CV, v = 0.01 (slow learning), min num of data points in terminal nodes: 10.
 - **Extreme Gradient Boosing (XGBoost)**
-- Training attributes: Num trees: 50, max tree depth: 3.
-- Threshold of 0.9
+  - Training attributes: Num trees: 50, max tree depth: 3.
+  - Threshold of 0.9
 - **Neural Networks**
-- Compared different hidden layers: single layer (30), 2 layer (60,30) and deep neural network (100,50,25)
+  - Compared different hidden layers: single layer (30), 2 layer (60,30) and deep neural network (100,50,25)
 
 
 ## Comparison 
